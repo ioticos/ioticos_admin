@@ -21,11 +21,20 @@ class Devices extends CI_Controller {
 		$this->load->view('head');
 		$this->load->view('scripts');
 		$this->load->view('open');
-		$this->load->view('header');
+		$this->load->view('header',$data);
 		$this->load->view('sidebar');
     $this->load->view('contents/devices',$data);
 		$this->load->view('close');
   }
+
+
+	public function change_device(){
+		$user_id = $this->session->userdata('user_id');
+		$device_id = strip_tags($this->input->post('device_id'));
+		$result = $this->Devices_model->change_device($user_id, $device_id);
+	}
+
+
 
 	public function add(){
 		$user_id = $this->session->userdata('user_id');

@@ -2,21 +2,12 @@
     <div class="mdl-layout__header-row">
         <div class="mdl-layout-spacer"></div>
         <!-- Search-->
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-                <i class="material-icons">search</i>
-            </label>
+        <select id="device_select" onchange="change_device()" class="" name="" style="background:transparent;color:white">
+          <?php foreach ($devices as $device ) { ?>
+            <option value="<?php echo $device['device_id'] ?>" <?php if ($_SESSION['selected_device'] == $device['device_id']){echo "selected";} ?>><?php echo $device['device_alias']?></option>
+          <?php } ?>
+        </select>
 
-            <div class="mdl-textfield__expandable-holder">
-                <input class="mdl-textfield__input" type="text" id="search"/>
-                <label class="mdl-textfield__label" for="search">Enter your query...</label>
-            </div>
-        </div>
-
-        <div class="material-icons mdl-badge mdl-badge--overlap mdl-button--icon notification" id="notification"
-             data-badge="23">
-            notifications_none
-        </div>
         <!-- Notifications dropdown-->
         <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right mdl-shadow--2dp notifications-dropdown"
             for="notification">
@@ -206,3 +197,14 @@
         </ul>
     </div>
 </header>
+
+<script type="text/javascript">
+  function change_device(){
+
+    var device_id = $("#device_select").val();
+    console.log(device_id);
+    $.post("<?php echo base_url('devices/change_device'); ?>", {device_id: device_id}, function(result){
+      location.reload();
+    });
+  }
+</script>

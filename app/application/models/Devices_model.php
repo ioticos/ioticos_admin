@@ -12,6 +12,26 @@ class Devices_model extends CI_Model
     return $result;
   }
 
+  public function change_device($user_id, $device_id){
+    //check if user own the device
+    $this->db->select('*');
+    $this->db->from('devices');
+    $this->db->where('device_user_id', $user_id);
+    $this->db->where('device_id', $device_id);
+
+    $query = $this->db->get();
+
+    if ($query->num_rows() == 1) {
+      $this->db->set('user_selected_device', $device_id);
+      $this->db->where('user_id', $user_id);
+      $this->db->update('users'); // gives UPDATE mytable SET field = field+1 WHERE id = 2
+      $_SESSION['selected_device'] = $device_id;
+      return True;
+    }else{
+      return False;
+    }
+  }
+
   public function delete_device($user_id, $device_id){
     //check if user own the device
     $this->db->select('*');

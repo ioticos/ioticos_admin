@@ -22,7 +22,8 @@ class Login_model extends CI_Model
                 'user_id' => $result->user_id,
                 'user_name' => $result->user_name,
                 'user_email' => $result->user_email,
-                'user_image' => $result->user_image
+                'user_image' => $result->user_image,
+                'selected_device' => $result->user_selected_device
             ));
 
             $_SESSION['msg_type'] = "";
