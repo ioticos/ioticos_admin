@@ -11,6 +11,25 @@ class Devices_model extends CI_Model
     $result =	$this->db->get()->result_array();
     return $result;
   }
+
+  public function delete_device($user_id, $device_id){
+    //check if user own the device
+    $this->db->select('*');
+    $this->db->from('devices');
+    $this->db->where('device_user_id', $user_id);
+    $this->db->where('device_id', $device_id);
+
+    $query = $this->db->get();
+
+    if ($query->num_rows() == 1) {
+      $this->db->where('device_id', $device_id);
+      $this->db -> delete('devices');
+      return True;
+    }else{
+      return False;
+    }
+  }
+
   public function add($user_id,$device_alias,$device_serial_number)
   {
 

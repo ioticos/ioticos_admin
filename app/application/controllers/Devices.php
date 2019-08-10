@@ -53,6 +53,18 @@ class Devices extends CI_Controller {
 		redirect(base_url('devices'), 'refresh');
 	}
 
+	public function delete_device(){
+		$user_id = $this->session->userdata('user_id');
+		$device_id = strip_tags($this->input->post('device_id'));
+		$result = $this->Devices_model->delete_device($user_id, $device_id);
+
+		if ($result == True){
+			echo "True";
+		}else {
+			echo "False";
+		}
+	}
+
 
 
 }

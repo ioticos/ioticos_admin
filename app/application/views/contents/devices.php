@@ -56,7 +56,7 @@
                             <td class="mdl-data-table__cell--non-numeric"><?php echo $device['device_alias'] ?></td>
                             <td style="text-align:center" class="mdl-data-table__cell--non-numeric"><?php echo $device['device_date'] ?></td>
                             <td style="text-align:center" class="mdl-data-table__cell--non-numeric"><?php echo $device['device_sn'] ?></td>
-                            <td style="text-align:center" class="mdl-data-table__cell--non-numeric"><span class="label label--mini color--red">Delete</span> </td>
+                            <td style="text-align:center" class="mdl-data-table__cell--non-numeric"><span onclick="delete_device('<?php echo $device['device_id'] ?>')" class="label label--mini color--red">Delete</span> </td>
                         </tr>
 
                       <?php endforeach; ?>
@@ -68,3 +68,42 @@
     </div>
 
   </main>
+
+  <script type="text/javascript">
+
+    function delete_device(device_id){
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.value) {
+          $.post("<?php echo base_url('devices/delete_device') ?>", {device_id:device_id}, function(result){
+            if (result == "True"){
+              Swal.fire({
+                title: 'Success!',
+                text: "Device deleted",
+                type: 'success',
+                showCancelButton: false,
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+              }).then((result) => {
+                location.reload();
+              })
+            }else{
+              Swal.fire(
+                'ERROR!',
+                'Your device has not been deleted.',
+                'warning'
+              )
+            }
+          });
+
+        }
+      })
+    }
+  </script>
