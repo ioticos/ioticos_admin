@@ -48,8 +48,8 @@ const options = {
   connectTimeout: 1000,
   // Authentication
   clientId: 'client_id_'+ Math.floor((Math.random() * 1000000) + 1),
-  username: 'VwaaCMWpQ1uTFJu',
-  password: '5F9z2Y46j3SeV5Q',
+  username: '<?php echo MQTT_USER; ?>',
+  password: '<?php echo MQTT_PASSWORD; ?>',
   keepalive: 60,
   clean: true,
 }
@@ -62,7 +62,7 @@ var device_topic = '<?php echo ROOT_TOPIC ."/". $_SESSION['selected_topic']."/" 
 client.on('connect', () => {
   console.log('Connect success');
 
-  client.subscribe(device_topic + "#", { qos: 0 }, (error) => {
+  client.subscribe(device_topic + "data", { qos: 0 }, (error) => {
     if(error){
       console.log("Error at subscribe");
     }else{
@@ -87,37 +87,53 @@ client.on('message', (topic, message) => {
     $("#display_temp").html(temp);
 
     if(switch1 == "1"){
-      console.log("fhahadsf");
-      $("#display_sw1").addClass('is_checked')
+      $("#display_sw1").prop('checked', true);
     }else{
-      $("#display_sw1").removeClass('is_checked');
+      $("#display_sw1").prop('checked',"");
     }
 
     if(switch2 == "1"){
-      $("#switch-2").prop('checked', true);
+      $("#display_sw2").prop('checked', true);
     }else{
-      $("#switch-2").prop('checked', false);
+      $("#display_sw2").prop('checked',"" );
     }
 
 
   }
 
 
-
-
 })
 
 client.on('reconnect', (error) => {
   console.log('reconnecting:', error);
-  $("#display_status").append("🔵 Reconectando... :(<br>");
 })
 
 client.on('error', (error) => {
   console.log('Connect Error:', error);
-  $("#display_status").append("🔴 Error en la conexión :(<br>");
 })
 
+function sw1_change(){
+  if ($('#display_sw1').is(":checked"))
+  {
+    client.publish(device_topic + 'actions/sw1',"1");
+  }else{
+    client.publish(device_topic + 'actions/sw1',"0");
+  }
+}
 
+function sw2_change(){
+  if ($('#display_sw2').is(":checked"))
+  {
+    client.publish(device_topic + 'actions/sw2',"1");
+  }else{
+    client.publish(device_topic + 'actions/sw2',"0");
+  }
+}
+
+function slider_change(){
+  value = $('#display_slider').val();
+  client.publish(device_topic + 'actions/slider',value);
+}
 
 </script>
 <!-- endinject -->

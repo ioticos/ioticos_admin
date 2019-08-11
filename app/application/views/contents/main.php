@@ -62,7 +62,7 @@
 
                   <!-- SWITCH-->
                   <label class="switch">
-                    <input type="checkbox" id="display_sw1">
+                    <input onchange="sw1_change()" type="checkbox" id="display_sw1">
                     <span class="slider round"></span>
                   </label>
 
@@ -76,7 +76,7 @@
 
                   <!-- SWITCH-->
                   <label class="switch">
-                    <input type="checkbox" id="display_sw2">
+                    <input onchange="sw2_change()" type="checkbox" id="display_sw2">
                     <span class="slider round"></span>
                   </label>
 
@@ -88,7 +88,7 @@
                 <span class="mdl-list__item-primary-content list__item-text">FAN</span>
                 <span class="mdl-list__item-secondary-content">
 
-                  <input class="mdl-slider mdl-js-slider slider--colored-light-blue" type="range" min="0" max="100" value="12" tabindex="0">
+                  <input onchange="slider_change()" id="display_slider" class="mdl-slider mdl-js-slider slider--colored-light-blue" type="range" min="0" max="100" value="12" tabindex="0">
 
                 </span>
               </li>
