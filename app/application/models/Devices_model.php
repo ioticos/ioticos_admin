@@ -19,14 +19,15 @@ class Devices_model extends CI_Model
     $this->db->where('device_user_id', $user_id);
     $this->db->where('device_id', $device_id);
 
-    $query = $this->db->get();
+    $result =	$this->db->get()->result_array();
 
-    if ($query->num_rows() == 1) {
+
+    if (count($result) == 1) {
       $this->db->set('user_selected_device', $device_id);
       $this->db->where('user_id', $user_id);
       $this->db->update('users'); // gives UPDATE mytable SET field = field+1 WHERE id = 2
       $_SESSION['selected_device'] = $device_id;
-      return True;
+      $_SESSION['selected_topic'] = $result[0]['device_topic'];
     }else{
       return False;
     }

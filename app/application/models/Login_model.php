@@ -26,6 +26,14 @@ class Login_model extends CI_Model
                 'selected_device' => $result->user_selected_device
             ));
 
+            $this->db->select('*');
+            $this->db->from('devices');
+            $this->db->where('device_user_id', $user_id);
+            $this->db->where('device_id', $_SESSION['selected_device']);
+
+            $result =	$this->db->get()->result_array();
+            $_SESSION['selected_topic'] = $result[0]['device_topic'];
+
             $_SESSION['msg_type'] = "";
             $_SESSION['msg_title'] = "";
             $_SESSION['msg_body'] = "";

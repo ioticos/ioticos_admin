@@ -17,7 +17,7 @@
             </div>
           </div>
           <div class="mdl-card__supporting-text mdl-card--expand">
-            <p class="weather-temperature">-11<sup>&deg;</sup></p>
+            <p id="display_temp" class="weather-temperature">-11<sup>&deg;</sup></p>
 
             <p class="weather-description">
               Cloudy and snow
@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="mdl-card__supporting-text mdl-card--expand">
-            <p class="weather-temperature">-11<sup>&deg;</sup></p>
+            <p id="display_hum" class="weather-temperature">-11<sup>&deg;</sup></p>
 
             <p class="weather-description">
               Cloudy and snow
@@ -59,27 +59,32 @@
                 <span class="mdl-list__item-primary-content list__item-text">DOOR LIGHT</span>
                 <span class="mdl-list__item-secondary-content">
 
+
                   <!-- SWITCH-->
-                  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect switch--colored-purple" for="switch-1">
-                    <input type="checkbox" id="switch-1" class="mdl-switch__input" checked>
+                  <label class="switch">
+                    <input type="checkbox" id="display_sw1">
+                    <span class="slider round"></span>
                   </label>
 
                 </span>
               </li>
 
               <li class="mdl-list__item list__item--border-top">
+
                 <span class="mdl-list__item-primary-content list__item-text">DOOR</span>
                 <span class="mdl-list__item-secondary-content">
 
                   <!-- SWITCH-->
-                  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect switch--colored-orange" for="switch-2">
-                    <input type="checkbox" id="switch-2" class="mdl-switch__input" checked>
+                  <label class="switch">
+                    <input type="checkbox" id="display_sw2">
+                    <span class="slider round"></span>
                   </label>
 
                 </span>
               </li>
 
               <li class="mdl-list__item list__item--border-top">
+
                 <span class="mdl-list__item-primary-content list__item-text">FAN</span>
                 <span class="mdl-list__item-secondary-content">
 

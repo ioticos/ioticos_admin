@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+defined('ROOT_TOPIC') OR define('ROOT_TOPIC', '30mebY07oQ8TKOC');
+
 /*
 |--------------------------------------------------------------------------
 | Display Debug backtrace
