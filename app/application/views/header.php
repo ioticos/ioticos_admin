@@ -2,7 +2,8 @@
     <div class="mdl-layout__header-row">
         <div class="mdl-layout-spacer"></div>
         <!-- Search-->
-        <select id="device_select" onchange="change_device()" class="" name="" style="background:transparent;color:white">
+        <select id="device_select" onchange="change_device()" class="" name="" style="background:transparent;color:#d1d0cf">
+          <option value="">Select Device</option>
           <?php foreach ($devices as $device ) { ?>
             <option value="<?php echo $device['device_id'] ?>" <?php if ($_SESSION['selected_device'] == $device['device_id']){echo "selected";} ?>><?php echo $device['device_alias']?></option>
           <?php } ?>

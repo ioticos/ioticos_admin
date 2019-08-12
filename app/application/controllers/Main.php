@@ -19,13 +19,29 @@ class Main extends CI_Controller {
 		$user_id = $this->session->userdata('user_id');
 		$data['devices'] = $this->Devices_model->get_devices($user_id);
 
+		$device_data = $this->Main_model->get_data($user_id, $_SESSION['selected_device']);
+
+		$temps="";
+		$hums = "";
+		$dates="";
+
+
+		foreach ($device_data as $d) {
+			$temps .= $d['data_temp'].",";
+			$hums .= $d['data_hum'].",";
+			$dates .= "'".$d['data_date']."',";
+		}
+
+		$data['temps'] = $temps;
+		$data['hums'] = $hums;
+		$data['dates'] = $dates;
 
 		$this->load->view('head');
 		$this->load->view('scripts');
 		$this->load->view('open');
 		$this->load->view('header',$data);
 		$this->load->view('sidebar');
-    $this->load->view('contents/main');
+    $this->load->view('contents/main',$data);
 		$this->load->view('close');
   }
 

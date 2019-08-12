@@ -36,6 +36,7 @@ class Devices extends CI_Controller {
 
 
 
+
 	public function add(){
 		$user_id = $this->session->userdata('user_id');
 		$device_alias = strip_tags($this->input->post('device_alias'));
@@ -59,6 +60,7 @@ class Devices extends CI_Controller {
 			$_SESSION['msg_footer'] = "https://ioticos.org";
 		}
 
+
 		redirect(base_url('devices'), 'refresh');
 	}
 
@@ -66,6 +68,8 @@ class Devices extends CI_Controller {
 		$user_id = $this->session->userdata('user_id');
 		$device_id = strip_tags($this->input->post('device_id'));
 		$result = $this->Devices_model->delete_device($user_id, $device_id);
+
+
 
 		if ($result == True){
 			echo "True";

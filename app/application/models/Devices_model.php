@@ -75,6 +75,10 @@ class Devices_model extends CI_Model
 
     if ($this->db->insert('devices', $data))
     {
+      //After insert device, we need put this device like "selected device"
+      $device_id = $this->db->insert_id();  //with ths line we capture last inserted id
+      $this->change_device($user_id,$device_id);
+
       return "success";
     }
     else

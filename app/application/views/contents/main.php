@@ -113,6 +113,20 @@
       </div>
       <!-- Table-->
 
+
+      <!-- Line chart2-->
+      <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+        <div class="mdl-card mdl-shadow--2dp line-chart">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Humidity</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <canvas id="my_chart2" width="300" height="300"  ></canvas>
+          </div>
+        </div>
+      </div>
+      <!-- Table-->
+
     </div>
 
     </div>
@@ -121,15 +135,16 @@
 
 <script>
 var ctx = document.getElementById('my_chart').getContext('2d');
+var ctx2 = document.getElementById('my_chart2').getContext('2d');
 
 
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['1','2','3','4','5','6'],
+        labels: [<?php echo $dates ?>],
         datasets: [{
             label: '° C',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [<?php echo $temps ?>],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
             ],
@@ -150,4 +165,34 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+
+var myChart2 = new Chart(ctx2, {
+    type: 'line',
+    data: {
+        labels: [<?php echo $dates ?>],
+        datasets: [{
+            label: '%',
+            data: [<?php echo $hums ?>],
+            backgroundColor: [
+                'rgba(30, 170, 132, 0.2)',
+            ],
+            borderColor: [
+                'rgba(30, 170, 132, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+      maintainAspectRatio: false,
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
 </script>
