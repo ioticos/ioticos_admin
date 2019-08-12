@@ -19,6 +19,9 @@ class Insertdata extends CI_Controller {
 			$hum = strip_tags($this->input->post('hum'));
 
 			$result = $this->Insertdata_model->insert($device_sn, $temp, $hum);
+			echo $result;
+		}else{
+			echo "access denied";
 		}
 
   }

@@ -14,7 +14,7 @@
             Devices
           </a>
 
-          <a class="mdl-navigation__link <?php if (current_url() == base_url('profile') ) {echo "mdl-navigation__link--current";} ?>" href="<?php echo base_url('profile')?>">
+          <a class="mdl-navigation__link <?php if (current_url() == base_url('machinelearning') ) {echo "mdl-navigation__link--current";} ?>" href="<?php echo base_url('machinelearning')?>">
             <i class="material-icons" role="presentation">group_work</i>
             Machine Learning
           </a>

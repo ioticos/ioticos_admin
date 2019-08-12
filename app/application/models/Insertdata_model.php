@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Inserdata_model extends CI_Model
+class Insertdata_model extends CI_Model
 {
 
   public function insert($device_sn, $temp, $hum){

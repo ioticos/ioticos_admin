@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+defined('GET_DATA_PASSWORD') OR define('GET_DATA_PASSWORD', '232323');
 defined('INSERT_DATA_PASSWORD') OR define('INSERT_DATA_PASSWORD', '121212');
 defined('MQTT_PASSWORD') OR define('MQTT_PASSWORD', '5F9z2Y46j3SeV5Q');
 defined('MQTT_USER') OR define('MQTT_USER', 'VwaaCMWpQ1uTFJu');
