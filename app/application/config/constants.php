@@ -3,9 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 defined('GET_DATA_PASSWORD') OR define('GET_DATA_PASSWORD', '232323');
 defined('INSERT_DATA_PASSWORD') OR define('INSERT_DATA_PASSWORD', '121212');
-defined('MQTT_PASSWORD') OR define('MQTT_PASSWORD', '5F9z2Y46j3SeV5Q');
-defined('MQTT_USER') OR define('MQTT_USER', 'VwaaCMWpQ1uTFJu');
-defined('ROOT_TOPIC') OR define('ROOT_TOPIC', '30mebY07oQ8TKOC');
+
+defined('MQTT_USER') OR define('MQTT_USER', 'y0v1DEympJ3yGp5');
+defined('MQTT_PASSWORD') OR define('MQTT_PASSWORD', 'F9wGEVUB1pbwJ5m');
+defined('ROOT_TOPIC') OR define('ROOT_TOPIC', 'pDmVE0zdmZXpxDP');
 
 /*
 |--------------------------------------------------------------------------

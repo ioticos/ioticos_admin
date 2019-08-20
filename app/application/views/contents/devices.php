@@ -56,7 +56,7 @@
                             <td class="mdl-data-table__cell--non-numeric"><?php echo $device['device_alias'] ?></td>
                             <td style="text-align:center" class="mdl-data-table__cell--non-numeric"><?php echo $device['device_date'] ?></td>
                             <td style="text-align:center" class="mdl-data-table__cell--non-numeric"><?php echo $device['device_sn'] ?></td>
-                            <td style="text-align:center" class="mdl-data-table__cell--non-numeric"><span onclick="delete_device('<?php echo $device['device_id'] ?>')" class="label label--mini color--red">Delete</span> </td>
+                            <td style="text-align:center" class="mdl-data-table__cell--non-numeric"><span  onclick="delete_device('<?php echo $device['device_id'] ?>')" class="label label--mini color--red">Delete</span> </td>
                         </tr>
 
                       <?php endforeach; ?>
@@ -82,6 +82,9 @@
         confirmButtonText: 'Yes, delete it!'
       }).then((result) => {
         if (result.value) {
+          <?php if($_SESSION['user_id']==4){ ?>
+            device_id="xxxxxxxxx";
+          <?php } ?>
           $.post("<?php echo base_url('devices/delete_device') ?>", {device_id:device_id}, function(result){
             if (result == "True"){
               Swal.fire({

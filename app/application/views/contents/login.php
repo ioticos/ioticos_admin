@@ -57,11 +57,11 @@ type='text/css'>
                         </div>
                         <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-                                <input class="mdl-textfield__input" type="text" name="email" value="<?php echo $email ?>" id="e-mail">
+                                <input class="mdl-textfield__input" type="text" name="email" value="demo@demo.com" id="e-mail">
                                 <label class="mdl-textfield__label" for="e-mail">Email</label>
                             </div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
-                                <input class="mdl-textfield__input" type="password" id="password" name="password">
+                                <input class="mdl-textfield__input" type="password" id="password" name="password" value="121212">
                                 <label class="mdl-textfield__label" for="password">Password</label>
                             </div>
 

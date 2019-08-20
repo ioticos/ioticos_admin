@@ -29,7 +29,7 @@
                                               <input class="mdl-textfield__input" type="file" name="image">
                                           </div>
 
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-light-blue" data-upgraded=",MaterialButton,MaterialRipple" type="submit">
+                                <button <?php if($_SESSION['user_id']==4){echo "disabled";} ?> class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-light-blue" data-upgraded=",MaterialButton,MaterialRipple" type="submit">
                                     Save!
                                 <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 262.161px; height: 262.161px; transform: translate(-50%, -50%) translate(74px, 23px);"></span></span></button>
                                       </div>

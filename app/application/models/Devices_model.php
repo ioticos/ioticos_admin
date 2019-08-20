@@ -70,7 +70,7 @@ class Devices_model extends CI_Model
       'device_user_id' => $user_id,
       'device_alias' => $device_alias,
       'device_sn' => $device_serial_number,
-      'device_topic' => $user_id."-".$this->generateRandomString(10)
+      'device_topic' => $this->generateRandomString(10)
     );
 
     if ($this->db->insert('devices', $data))
