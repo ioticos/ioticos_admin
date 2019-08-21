@@ -1,12 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+//esta es la pass que envían los dispositivos para preguntarle al sistema datos como el tópico que debe usar ese dispositivo
+//si cambias esta pass debes hacer lo mismo en tu dispositivo
 defined('GET_DATA_PASSWORD') OR define('GET_DATA_PASSWORD', '232323');
+
+//esta es la pass que enviará tu dispositivo para poder insertar datos en la tabla data.
 defined('INSERT_DATA_PASSWORD') OR define('INSERT_DATA_PASSWORD', '121212');
 
-defined('MQTT_USER') OR define('MQTT_USER', 'y0v1DEympJ3yGp5');
-defined('MQTT_PASSWORD') OR define('MQTT_PASSWORD', 'F9wGEVUB1pbwJ5m');
-defined('ROOT_TOPIC') OR define('ROOT_TOPIC', 'pDmVE0zdmZXpxDP');
+//credenciales MQTT que obtendras del nodo creado en IoTicos.org
+defined('MQTT_USER') OR define('MQTT_USER', '0AJDqCpuJnr3VwG');
+defined('MQTT_PASSWORD') OR define('MQTT_PASSWORD', 'hIDxo6MJeZeOVAC');
+defined('ROOT_TOPIC') OR define('ROOT_TOPIC', 'wBdfeDSE8C1zFW6');
 
 /*
 |--------------------------------------------------------------------------

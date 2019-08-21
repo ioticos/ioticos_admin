@@ -17,7 +17,7 @@
             </div>
           </div>
           <div class="mdl-card__supporting-text mdl-card--expand">
-            <p id="display_temp" class="weather-temperature">-11<sup>&deg;</sup></p>
+            <p id="display_temp" class="weather-temperature">--<sup>&deg;</sup></p>
 
             <p class="weather-description">
               Cloudy and snow
@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="mdl-card__supporting-text mdl-card--expand">
-            <p id="display_hum" class="weather-temperature">-11<sup>&deg;</sup></p>
+            <p id="display_hum" class="weather-temperature">--</p>
 
             <p class="weather-description">
               Cloudy and snow
@@ -88,7 +88,7 @@
                 <span class="mdl-list__item-primary-content list__item-text">FAN</span>
                 <span class="mdl-list__item-secondary-content">
 
-                  <input onchange="slider_change()" id="display_slider" class="mdl-slider mdl-js-slider slider--colored-light-blue" type="range" min="0" max="100" value="12" tabindex="0">
+                  <input onchange="slider_change()" id="display_slider" class="mdl-slider mdl-js-slider slider--colored-light-blue" type="range" min="0" max="254" value="12" tabindex="0">
 
                 </span>
               </li>
