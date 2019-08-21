@@ -142,20 +142,8 @@ defined('MQTT_PASSWORD') OR define('MQTT_PASSWORD', 'hIDxo6MJeZeOVAC');
 defined('ROOT_TOPIC') OR define('ROOT_TOPIC', 'wBdfeDSE8C1zFW6');
 ```
 
+Project Link: [https://github.com/ioticos/ioticos_admin](https://github.com/ioticos/ioticos_admin)
 
-
-
-
-Project Link: [https://github.com/github_username/repo](https://github.com/github_username/repo)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
 
 
 
@@ -164,7 +152,7 @@ Project Link: [https://github.com/github_username/repo](https://github.com/githu
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[contributors-url]: https://github.com/ioticos/ioticos-admin/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
 [forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
