@@ -2,7 +2,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
-[![Downloads][down-shield]]
+![Downloads][down-shield]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -42,16 +42,11 @@
 
 
 <!-- TABLE OF CONTENTS -->
-## Table of Contents
+## Contenido
 
 * [Sobre el Proyecto](#sobre-el-proyecto)
 * [Recomendaciones y Advertencias](#recomendaciones-y-advertencias)
-* [Instalación](#instalación)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+
 
 
 
