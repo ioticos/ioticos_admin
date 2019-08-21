@@ -136,15 +136,15 @@ Los comentarios hechos en el código nos explicarán de sobrada manera para qué
 ```
 //esta es la pass que envían los dispositivos para preguntarle al sistema datos como el tópico que debe usar ese dispositivo
 //si cambias esta pass debes hacer lo mismo en tu dispositivo
-defined('GET_DATA_PASSWORD') OR define('GET_DATA_PASSWORD', '232323');
+defined('GET_DATA_PASSWORD') OR define('GET_DATA_PASSWORD', 'xxxxxxxx');
 
 //esta es la pass que enviará tu dispositivo para poder insertar datos en la tabla data.
-defined('INSERT_DATA_PASSWORD') OR define('INSERT_DATA_PASSWORD', '121212');
+defined('INSERT_DATA_PASSWORD') OR define('INSERT_DATA_PASSWORD', 'xxxxxxx');
 
 //credenciales MQTT que obtendras del nodo creado en IoTicos.org
-defined('MQTT_USER') OR define('MQTT_USER', '0AJDqCpuJnr3VwG');
-defined('MQTT_PASSWORD') OR define('MQTT_PASSWORD', 'hIDxo6MJeZeOVAC');
-defined('ROOT_TOPIC') OR define('ROOT_TOPIC', 'wBdfeDSE8C1zFW6');
+defined('MQTT_USER') OR define('MQTT_USER', 'xxxxxxxx');
+defined('MQTT_PASSWORD') OR define('MQTT_PASSWORD', 'xxxxxxxx');
+defined('ROOT_TOPIC') OR define('ROOT_TOPIC', 'xxxxxxxx');
 ```
 
 Project Link: [https://github.com/ioticos/ioticos_admin](https://github.com/ioticos/ioticos_admin)
