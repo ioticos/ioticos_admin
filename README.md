@@ -15,7 +15,7 @@
     <img src="https://ioticos.org/images/files/illustrator-featured-img-1.png" alt="Logo" width="380" >
   </a>
 
-  <h2 align="center">IoTicos Admin</h2>
+  <h1 align="center">IoTicos Admin</h1>
 
   <p align="center">
     Un emprendimiento IoT en pocos clics
@@ -60,7 +60,7 @@ Here's a blank template to get started:
 `github_username`, `repo`, `twitter_handle`, `email`
 
 
-### Built With
+### Built Wit
 
 * []()
 * []()
