@@ -60,7 +60,7 @@ Here's a blank template to get started:
 `github_username`, `repo`, `twitter_handle`, `email`
 
 
-### Built Wit
+### Built With
 
 * []()
 * []()
