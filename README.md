@@ -46,6 +46,7 @@
 
 * [Sobre el Proyecto](#sobre-el-proyecto)
 * [Recomendaciones y Advertencias](#recomendaciones-y-advertencias)
+* [Instalación](#Instalación)
 
 
 
