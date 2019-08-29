@@ -7,16 +7,21 @@ class Register_model extends CI_Model {
   public function register ($name, $email, $password)
   {
 
+    //ante todo debemos ver si ese email que nos pasa el usuario existe en la base de datos, para
+    // no tener usuarios duplicados
     $this->db->select('user_email');
     $this->db->from('users');
     $this->db->where('user_email', $email);
 
     $query = $this->db->get();
 
+    //si existe...
     if($query->num_rows() > 0)
     {
       return "exist";
     }
+
+    //si no existe entonces procedemos a cargar en base de datos
     else
     {
 

@@ -4,6 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Devices_model extends CI_Model
 {
 
+ //obtenemos la lista completa de dispositivos
   public function get_devices($user_id){
     $this->db->SELECT();
     $this->db->FROM('devices');
@@ -12,20 +13,21 @@ class Devices_model extends CI_Model
     return $result;
   }
 
+  //cambiamos el dispositivo seleccionado
   public function change_device($user_id, $device_id){
-    //check if user own the device
+
+    //para evitar suplantación primero controlamos si el dispositivo que nos pasan le pertenece al usuario logueado
     $this->db->select('*');
     $this->db->from('devices');
     $this->db->where('device_user_id', $user_id);
     $this->db->where('device_id', $device_id);
-
     $result =	$this->db->get()->result_array();
 
-
+    //si el dispositivo le pertenece entonces, lo cargamos al id del mismo en variable de sesión.
     if (count($result) == 1) {
       $this->db->set('user_selected_device', $device_id);
       $this->db->where('user_id', $user_id);
-      $this->db->update('users'); // gives UPDATE mytable SET field = field+1 WHERE id = 2
+      $this->db->update('users');
       $_SESSION['selected_device'] = $device_id;
       $_SESSION['selected_topic'] = $result[0]['device_topic'];
     }else{
@@ -33,6 +35,7 @@ class Devices_model extends CI_Model
     }
   }
 
+  //elimina dispositivo, como siempre chequeamos antes de eliminar que ese dispo pertenezca al usuario logueado
   public function delete_device($user_id, $device_id){
     //check if user own the device
     $this->db->select('*');
@@ -51,9 +54,11 @@ class Devices_model extends CI_Model
     }
   }
 
+  //agregar nuevo dispositivo
   public function add($user_id,$device_alias,$device_serial_number)
   {
 
+    //comprobamos que no exista un dispositivo con el mismo numero de serie
     $this->db->select('device_sn');
     $this->db->from('devices');
     $this->db->where('device_sn', $device_serial_number);
@@ -63,9 +68,10 @@ class Devices_model extends CI_Model
 
     if($query->num_rows() > 0)
     {
-      return "exist";
+      return "exist"; //si existe
     }
 
+    //si no existe preparamos el array que será insertado como fila en la tabla devices
     $data = array(
       'device_user_id' => $user_id,
       'device_alias' => $device_alias,
@@ -75,8 +81,10 @@ class Devices_model extends CI_Model
 
     if ($this->db->insert('devices', $data))
     {
-      //After insert device, we need put this device like "selected device"
-      $device_id = $this->db->insert_id();  //with ths line we capture last inserted id
+      //A esta altura hemos logrado insertar el nuevo dispositivo, entonces, capturamos el id que mysql le ha asignado
+      $device_id = $this->db->insert_id();
+
+      //Teniendo el ID que le pertenece a eso dispositivo nos valemos de la función change_device, para dejar seleccionado al nuevo dispo
       $this->change_device($user_id,$device_id);
 
       return "success";
@@ -87,6 +95,7 @@ class Devices_model extends CI_Model
     }
   }
 
+  //Función util para generar strings randoms.
   function generateRandomString($length = 10)
   {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
