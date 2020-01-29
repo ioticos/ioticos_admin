@@ -33,9 +33,9 @@
     <br/>
     <a href="https://ioticosadmin.ml/app/">Ingresa a la demo</a>
     ·
-    <a href="https://github.com/ioticos/repo/issues">Report Bug</a>
+    <a href="https://github.com/ioticos/ioticos_admin/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ioticos/repo/issues">Request Feature</a>
+    <a href="https://github.com/ioticos/ioticos_admin/issues">Request Feature</a>
   </p>
 </p>
 
