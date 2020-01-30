@@ -1,7 +1,0 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-RewriteCond %{HTTPS} !on
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-RewriteCond $1 !^(index\.php|images|php|script|styles|js|css)
-RewriteRule ^(.*)$ /app/index.php/$1 [L]
