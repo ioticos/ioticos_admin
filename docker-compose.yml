@@ -1,0 +1,56 @@
+version: '3.0'
+services:
+
+    db:
+        container_name: db
+        image: mariadb:latest
+        volumes:
+            - ./db/admin_lte.sql:/docker-entrypoint-initdb.d/1-init.sql
+            - ./user-data/database:/var/lib/mysql
+            - /etc/localtime:/etc/localtime:ro
+        environment:
+            - "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}"
+            - "MYSQL_DATABASE=${MYSQL_DATABASE}"
+            - "MYSQL_USER=${MYSQL_USER}"
+            - "MYSQL_PASSWORD=${MYSQL_PASSWORD}"
+        restart: always
+
+
+    ioticos:
+        container_name: ioticos
+        image: ioticosla/ioticosadmin:1.0
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - ./user-data/etc/letsencrypt:/etc/letsencrypt
+            #- ./build/ioticos/src/app:/var/www/html/app
+            - /etc/localtime:/etc/localtime:ro
+        environment:
+            - "TIMEZONE=${TIMEZONE}"
+            - "MYSQL_HOST=${MYSQL_HOST}"
+            - "MYSQL_PORT=${MYSQL_PORT}"
+            - "MYSQL_USER=${MYSQL_USER}"
+            - "MYSQL_PASSWORD=${MYSQL_PASSWORD}"
+            - "MYSQL_DATABASE=${MYSQL_DATABASE}"
+            - "GET_DATA_PASSWORD=${GET_DATA_PASSWORD}"
+            - "INSERT_DATA_PASSWORD=${INSERT_DATA_PASSWORD}"
+            - "MQTT_USER=${MQTT_USER}"
+            - "MQTT_PASSWORD=${MQTT_PASSWORD}"
+            - "ROOT_TOPIC=${ROOT_TOPIC}"
+        links:
+            - db
+        depends_on:
+            - db
+        restart: always
+
+    certbot:
+        container_name: certbot
+        image: cnsoluciones/certbot:latest
+        network_mode: host
+        restart: always
+        volumes:
+            - ./user-data/etc/letsencrypt:/etc/letsencrypt
+        entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+
