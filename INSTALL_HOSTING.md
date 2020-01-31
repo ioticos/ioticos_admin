@@ -1,12 +1,11 @@
 [![Inicia un Negocio IoT - IoTicos Admin ya está](https://raw.githubusercontent.com/ioticos/ioticos_admin/master/images/HOSTING.png)](https://www.youtube.com/watch?v=FTdcuZx6rUg)
 
-## Opción 1
 Requisitos:<br>
 Si bien IoTicos admin, podría funcionar en entornos locales, al ser un proyecto que necesita certificados ssl, y continuamente lo estaremos probando con conexiones MQTT de los dispositivos, se recomienda montar un entorno de desarrollo lo más parecido posible al de producción. <br><br>
 Lo ideal sería tener un servicio de Web Hosting, que nos provea de Apache, PHP, Mysql y **Certificados SSl** para nuestro dominio.<br><br>
 
 Instalando:<br>
-Aclaración: El código fuente se movio al directorio ioticos_admin/build/ioticos/src/ luego de la restructuración del repositorio.
+Aclaración: El código fuente se movio al directorio **ioticos_admin/build/ioticos/src/** luego de la restructuración del repositorio.
 
 Descargaremos la totalidad de los archivos del repositorio y lo subiremos a la raíz del hosting.(no debes subir el .sql)<br>
 
