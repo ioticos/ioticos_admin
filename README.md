@@ -88,9 +88,9 @@ Actualmente hay 2 formas de instalación:
 ###  Ioticos Admin Colaboradores 
 
 * Pablo
-* Gabi
+* Gaby 
 * Benja
-* Federico Pereira [github](https://github.com/lordbasex)
+* [Federico Pereira](https://github.com/lordbasex)
 
 
 Project Link: [https://github.com/ioticos/ioticos_admin](https://github.com/ioticos/ioticos_admin)
