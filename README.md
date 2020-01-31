@@ -14,13 +14,14 @@
 [down-shield]: https://img.shields.io/github/downloads/ioticos/ioticos_admin/total?style=plastic
 
 
+<div align="center">
+    <img src="https://raw.githubusercontent.com/ioticos/ioticos_admin/master/images/ioticos.png" width="400px"</img> 
+</div>
+
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/ioticos/ioticos_admin">
-    <img src="https://ioticos.org/images/files/illustrator-featured-img-1.png" alt="Logo" width="380" >
-  </a>
 
   <h1 align="center">IoTicos Admin</h1>
 
@@ -54,9 +55,10 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre el proyecto:
 
-<p align="center">
-  <img src="images/dashboard.jpg" alt="Logo" >
-</p>
+<div align="center">
+    <img src="https://raw.githubusercontent.com/ioticos/ioticos_admin/master/images/dashboard.jpg" width="800px"</img> 
+</div>
+
 
 IoTicos Admin, es una plataforma IoT desarrolada en PHP bajo el framework Codeigniter.<br>
 
@@ -67,6 +69,8 @@ La plataforma puede mostrar datos en tiempo real desde tus dispositivos mediante
 Por otro lado tendrás tu propia base de datos (MySql) tanto para acumular los datos que envían tus dispositivos, como para llevar la gestión de usuarios.<br>
 
 **IMPORTANTE:** No dejes de ver el proyecto para esp32 para usar con esta plataforma.<br><br><br>
+
+
 
 
 
