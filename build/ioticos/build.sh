@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t ioticosla/ioticosadmin:1.0 -f Dockerfile .
+docker build -t ioticosal/ioticosadmin:1.0 -f Dockerfile .
