@@ -82,8 +82,8 @@ Por otro lado tendrás tu propia base de datos (MySql) tanto para acumular los d
 ## Instalación: (Actualización 31 de enero.)
 
 Actualmente hay 2 formas de instalación:
-* 1 - La que requiere un hosting tipo https://www.000webhost.com/ ver video [Inicia un Negocio IoT - IoTicos Admin ya está Disponible en GitHub!](https://www.youtube.com/watch?v=FTdcuZx6rUg)
-* 2 - Docker. 
+* 1 - La que requiere un hosting tipo https://www.000webhost.com/ [LINK](https://github.com/ioticos/ioticos_admin/blob/master/INSTALL_HOSTING.md)
+* 2 - Docker vino a quedarse [LINK](https://github.com/ioticos/ioticos_admin/blob/master/INSTALL_DOCKER.md) 
 
 
 
