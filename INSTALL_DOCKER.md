@@ -1,5 +1,4 @@
 # Docker
-Proyectos en Docker
 ![ScrennShot](https://raw.githubusercontent.com/lordbasex/Docker/master/docker-logo.png)
 
 Porqué Docker? y porqué no?
@@ -75,8 +74,7 @@ Para la opción 1 necesitamos descargarnos 3 archivos (descargar en el mismo dir
 | SECURE_CA | Certificado CA SSL para apache, no modificar si vamos a usar Let's Encrypt |
 | SECURE_KEY | Certificado KEY SSL para apache, no modificar si vamos a usar Let's Encrypt |
 | SECURE_CERT | Certificado CERT SSL para apache, no modificar si vamos a usar Let's Encrypt |
-|GET_DATA_PASSWORD| Esta es la pass que envían los dispositivos para preguntarle al sistema datos como el tópico que debe usar ese dispositivo.
-Si cambias esta pass debes hacer lo mismo en tu dispositivo|
+|GET_DATA_PASSWORD| Esta es la pass que envían los dispositivos para preguntarle al sistema datos como el tópico que debe usar ese dispositivo. Si cambias esta pass debes hacer lo mismo en tu dispositivo|
 |INSERT_DATA_PASSWORD | Esta es la pass que enviará tu dispositivo para poder insertar datos en la tabla data. |
 |MQTT_USER| Credenciales user MQTT que obtendras del nodo creado en IoTicos.org |
 |MQTT_PASSWORD| Credenciales password MQTT que obtendrás del nodo creado en IoTicos.org | 
