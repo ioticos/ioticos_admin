@@ -43,7 +43,7 @@ chmod 777 /usr/bin/docker-compose
 
 
 
-* Instalación IoTicos Admin
+## Instalación IoTicos Admin
 
 Mirar video por si las moscas... [VIDEO YOUTUBE](https://www.youtube.com/watch?v=saZ8M0nd058)
 
