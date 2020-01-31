@@ -45,11 +45,13 @@ chmod 777 /usr/bin/docker-compose
 
 * Instalación IoTicos Admin
 
-[VIDEO YOUTUBE](https://www.youtube.com/watch?v=saZ8M0nd058&feature=youtu.be)
+Mirar video por si las moscas... [VIDEO YOUTUBE](https://www.youtube.com/watch?v=saZ8M0nd058)
 
 Partiendo que ya tiene instalado docker y docker-compose.
 
-Creamos el archivo docker-compose.yml o lo descargamos [link](https://raw.githubusercontent.com/ioticos/ioticos_admin/master/docker-compose.yml)
+Tenemos dos opciones para instalar el proyecto.
+
+Próximamente segundo video.
 
 ## Opción 1
 Para la opción 1 necesitamos descargarnos 3 archivos (descargar en el mismo directorio) 
@@ -124,29 +126,4 @@ docker-compose exec ioticos bash
 ```bash
 source .env && docker-compose exec db mysql -uroot -p${MYSQL_ROOT_PASSWORD} ioticos_db
 ```
-
-
-
-
-## ENV Variables
-
-| Arguments  | Description |
-| :------------ |:------------------------------------------------: 
-| TIMEZONE | variable que utiliza php para obtener la hora según la región. Más info puede visitar https://www.php.net/manual/es/timezones.america.php |
-| MYSQL_HOST | Nombre de host del servidor MariaDB. Utilizamos el host db para identificar por medio de dns internos dicho servicio. No modificar. |
-| MYSQL_PORT  | Puerto por default, no modificar |
-| MYSQL_USER | Nombre de usuario, por default ioticos_us, se puede modificar al gusto de cada uno. |
-| MYSQL_PASSWORD | Contraseña del usuario ioticos_us, se puede cambiar sin problema |
-| MYSQL_ROOT_PASSWORD | Contraseña de root de MariaDB, se puede cambiar sin problema |
-| MYSQL_DATABASE | Nombre de base de datos, se puede cambiar sin problema |
-| DOMAINS | Con nuestro dominio o subdominio, es necesario para poder utilizar el sistema ya los devices tiene que conectarse de forma segura |
-| EMAIL | Esto es para que nos notifique cada 60 días la gente de le Let's Encrypt que tenemos que renovar los certificados, por medio de certbot.|
-| SECURE_CA | Certificado CA SSL para apache, no modificar si vamos a usar Let's Encrypt |
-| SECURE_KEY | Certificado KEY SSL para apache, no modificar si vamos a usar Let's Encrypt |
-| SECURE_CERT | Certificado CERT SSL para apache, no modificar si vamos a usar Let's Encrypt |
-|GET_DATA_PASSWORD| Esta es la pass que envían los dispositivos para preguntarle al sistema datos como el tópico que debe usar ese dispositivo. Si cambias esta pass debes hacer lo mismo en tu dispositivo|
-|INSERT_DATA_PASSWORD | Esta es la pass que enviará tu dispositivo para poder insertar datos en la tabla data. |
-|MQTT_USER| Credenciales user MQTT que obtendras del nodo creado en IoTicos.org |
-|MQTT_PASSWORD| Credenciales password MQTT que obtendrás del nodo creado en IoTicos.org | 
-|ROOT_TOPIC| Credenciales topic raiz MQTT que obtendrás del nodo creado en IoTicos.org |
 
