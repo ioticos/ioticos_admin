@@ -76,7 +76,6 @@ Por otro lado tendrás tu propia base de datos (MySql) tanto para acumular los d
 * [El proyecto se en cuentra en plena etapa de desarrollo, contamos con tu ayuda para mejorarlo]
 
 
-<br><br><br>
 
 <!-- GETTING STARTED -->
 ## Instalación: (Actualización 31 de enero.)
@@ -86,6 +85,12 @@ Actualmente hay 2 formas de instalación:
 * 2 - Docker vino a quedarse [LINK](https://github.com/ioticos/ioticos_admin/blob/master/INSTALL_DOCKER.md) 
 
 
+###  Ioticos Admin Colaboradores 
+
+* Pablo
+* Gabi
+* Benja
+* Federico Pereira [github](https://github.com/lordbasex)
 
 
 Project Link: [https://github.com/ioticos/ioticos_admin](https://github.com/ioticos/ioticos_admin)
