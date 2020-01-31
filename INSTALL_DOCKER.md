@@ -98,13 +98,16 @@ Modificamos el archivo .env
 
 
 
+## Creación Certificados SSL Let's Encrypt
 
-Con este comando creamos el Certificado SSL con certbot para Let's Encrypt.
-Nota se ejecuta y listo, lo hace solito y tarda 30 segundos. Pueden ver en la carpeta que se llama user-data.
+Con este comando creamos los Certificado SSL con certbot para Let's Encrypt.
+Nota se ejecuta y listo, lo hace solito y tarda 30 segundos. 
 
 ```bash
 docker-compose -f certbot.yml up
 ```
+
+## Deploy Panel IoTicos Admin
 
 Una ves que tenemos ya creado los archivos SSL, procedemos hacer el deploy de los demas contenedores.
 
@@ -114,15 +117,16 @@ docker-compose up -d
 
 LISTO. ya tenemos nuestro panel funcionando.
 
-* Comando utiles
+
+## Comando utiles
 
 
-#CLI PANEL para entrar en la consola Apache
+## CLI PANEL (Para entrar en la consola Apache)
 ```bash
 docker-compose exec ioticos bash
 ```
 
-#CLI DB para entrar al servidor MariaDB desde consola.
+## CLI DB (Para entrar al servidor MariaDB desde consola)
 ```bash
 source .env && docker-compose exec db mysql -uroot -p${MYSQL_ROOT_PASSWORD} ioticos_db
 ```
