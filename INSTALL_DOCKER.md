@@ -3,6 +3,7 @@ Proyectos en Docker
 ![ScrennShot](https://raw.githubusercontent.com/lordbasex/Docker/master/docker-logo.png)
 
 Porqué Docker? y porqué no?
+
 Docker nos hace la vida más facil a la hora de trabajar en equipo. Como dicen...muchos indios y pocos casiques jajaja
 Hablando en serio, al hacer el deploy y estar trabajando a distancia es fundamental que todos los entornos de desarrollo sean iguales. 
 No podemos perder el tiempo para eso usamos Docker, aparte para llevarlo a produción sería transparente.
