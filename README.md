@@ -79,8 +79,15 @@ Por otro lado tendrás tu propia base de datos (MySql) tanto para acumular los d
 <br><br><br>
 
 <!-- GETTING STARTED -->
-## Instalación:
+## Instalación: (Actualización 31 de enero.)
 
+Actualmente hay 3 formas de instalación:
+* 1 - La que requiere un hosting tipo https://www.000webhost.com/ ver video [Inicia un Negocio IoT - IoTicos Admin ya está Disponible en GitHub!](https://www.youtube.com/watch?v=FTdcuZx6rUg)
+* 2 - Docker teniendo dos archivos.
+* 3 - Docker bajando el repositorio.
+
+
+## Opción 1
 Requisitos:<br>
 Si bien IoTicos admin, podría funcionar en entornos locales, al ser un proyecto que necesita certificados ssl, y continuamente lo estaremos probando con conexiones MQTT de los dispositivos, se recomienda montar un entorno de desarrollo lo más parecido posible al de producción. <br><br>
 Lo ideal sería tener un servicio de Web Hosting, que nos provea de Apache, PHP, Mysql y **Certificados SSl** para nuestro dominio.<br><br>
@@ -146,27 +153,12 @@ defined('MQTT_PASSWORD') OR define('MQTT_PASSWORD', 'xxxxxxxx');
 defined('ROOT_TOPIC') OR define('ROOT_TOPIC', 'xxxxxxxx');
 ```
 
+## Opción 2
+
+## Opción 3
+
+
 Project Link: [https://github.com/ioticos/ioticos_admin](https://github.com/ioticos/ioticos_admin)
 
-
-
-
-yum install -y mc screen unzip git net-tools
-
-
-#CREAR CERTIFICADOS SSL
-```bash
-docker-compose -f certbot.yml up
-```
-
-#CLI PANEL
-```bash
-docker-compose exec ioticos bash
-```
-
-#CLI DB
-```bash
-source .env && docker-compose exec db mysql -uroot -p${MYSQL_ROOT_PASSWORD} ioticos_db
-```
 
 
