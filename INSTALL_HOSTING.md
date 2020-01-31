@@ -1,4 +1,4 @@
-[![Inicia un Negocio IoT - IoTicos Admin ya está](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=FTdcuZx6rUg)
+[![Inicia un Negocio IoT - IoTicos Admin ya está](https://raw.githubusercontent.com/ioticos/ioticos_admin/master/images/HOSTING.png)](https://www.youtube.com/watch?v=FTdcuZx6rUg)
 
 ## Opción 1
 Requisitos:<br>
