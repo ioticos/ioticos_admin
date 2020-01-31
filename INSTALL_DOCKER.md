@@ -9,7 +9,7 @@ No podemos perder el tiempo para eso usamos Docker, aparte para llevarlo a produ
 No voy a dar todo el discurso de Docker esto Docker lo otro, solo se que llego para quedarce.
 
 
-# Instalación:
+## Instalación:
 Docker se puede instalar tanto en Windows, Linux y Mac
 
 En este ejemplo vamos a usar GNU/Linux.
@@ -51,14 +51,14 @@ Partiendo que ya tiene instalado docker y docker-compose.
 
 Creamos el archivo docker-compose.yml o lo descargamos [link](https://raw.githubusercontent.com/ioticos/ioticos_admin/master/docker-compose.yml)
 
-# Opción 1
+## Opción 1
 Para la opción 1 necesitamos descargarnos 3 archivos (descargar en el mismo directorio) 
 * [certbot](https://raw.githubusercontent.com/ioticos/ioticos_admin/master/certbot.yml) la vamos a utilizar para crear los Certificados SSL con Let's Encrypt automaticamente.
 * [docker-compose.yml](https://raw.githubusercontent.com/ioticos/ioticos_admin/master/docker-compose.yml) archivo para hacer el deploy del panel, creando 3 microservicios, Base de datos (MariaDB, Panel, Certbot (para actualizar cada 60 días los certificados. 
 * [.env](https://raw.githubusercontent.com/ioticos/ioticos_admin/master/.env) el cual se utiliza para los dos archivos anteriores, tomando las variables para su autoconfiguración.
 
 
-# ENV Variables
+## ENV Variables
 
 | Arguments  | Description |
 | :------------ |:------------------------------------------------: 
