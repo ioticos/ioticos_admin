@@ -18,7 +18,7 @@ services:
 
     ioticos:
         container_name: ioticos
-        image: ioticosla/ioticosadmin:1.0
+        image: ioticosal/ioticosadmin:1.0
         ports:
             - "80:80"
             - "443:443"
